@@ -1,0 +1,95 @@
+/* ===== Panel administrativo / empleado / cliente (negro, rojo, blanco) ===== */
+.panel-body {
+  margin: 0;
+  min-height: 100vh;
+  background: #f4efe8;
+  font-family: 'Roboto', system-ui, sans-serif;
+  color: #3a2a24;
+}
+.panel-top {
+  background: #170d0b;
+  color: #f7efe3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: .85rem 1.6rem;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-bottom: 3px solid #b3261e;
+  flex-wrap: wrap;
+}
+.panel-marca { display: flex; align-items: center; gap: .6rem; }
+.panel-marca span { font-size: 1.5rem; }
+.panel-marca strong {
+  font-family: 'Playfair Display', serif;
+  color: #e8b04b;
+  font-size: 1.05rem;
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+.panel-marca strong small {
+  font-family: 'Roboto', sans-serif;
+  font-size: .55rem;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: #f7efe3;
+  font-weight: 400;
+}
+.panel-usuario { display: flex; align-items: center; gap: .9rem; font-size: .85rem; }
+.panel-usuario .rol {
+  background: #b3261e;
+  padding: .2rem .7rem;
+  border-radius: 50px;
+  font-size: .68rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.panel-usuario a { color: #e8b04b; }
+.panel-usuario a:hover { text-decoration: underline; }
+.panel-main { width: min(1200px, 94%); margin: 2rem auto; }
+.panel-titulo { margin-bottom: 1.6rem; }
+.panel-titulo h1 { font-family: 'Playfair Display', serif; font-size: 1.9rem; color: #170d0b; }
+.panel-titulo p { color: #7d6a61; font-size: .92rem; }
+
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+.tarjeta {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.4rem;
+  box-shadow: 0 8px 24px rgba(23, 13, 11, .08);
+  border-left: 5px solid #b3261e;
+}
+.tarjeta .dato { font-family: 'Playfair Display', serif; font-size: 2rem; color: #170d0b; }
+.tarjeta .etiqueta { font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; color: #7d6a61; margin-top: .3rem; }
+.tarjeta.alerta { border-left-color: #e8b04b; }
+.tarjeta.ok { border-left-color: #2e7d32; }
+
+.panel-caja {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.6rem;
+  box-shadow: 0 8px 24px rgba(23, 13, 11, .08);
+  margin-bottom: 1.5rem;
+}
+.panel-caja h2 { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: #170d0b; margin-bottom: 1rem; }
+.lista-alerta { list-style: none; display: grid; gap: .6rem; }
+.lista-alerta li {
+  display: flex; justify-content: space-between; gap: 1rem;
+  padding: .7rem 1rem; background: #fdf7ef; border-radius: 10px;
+  border: 1px solid #f1e2cd; font-size: .9rem;
+}
+.lista-alerta b { color: #b3261e; }
+.panel-vacio { color: #7d6a61; font-size: .9rem; text-align: center; padding: 1rem; }
+.panel-nota {
+  background: #170d0b; color: #f7efe3; border-radius: 12px;
+  padding: 1rem 1.3rem; font-size: .85rem; margin-top: 1.4rem;
+}
+.panel-nota b { color: #e8b04b; }

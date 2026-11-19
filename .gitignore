@@ -1,0 +1,4 @@
+.env
+*.log
+assets/img/uploads/*
+!assets/img/uploads/.gitkeep
