@@ -50,7 +50,9 @@ function verificar_csrf(): void
     arrancar_sesion();
     $token = $_POST['csrf'] ?? '';
     if (!is_string($token) || empty($_SESSION['csrf']) || !hash_equals($_SESSION['csrf'], $token)) {
-        http_response_code(419);
+        // Apache/XAMPP no reconoce http_response_code(419) (lo convierte en 500);
+        // se envia la linea de estado explicita con razon valida.
+        header($_SERVER['SERVER_PROTOCOL'] . ' 419 Session Expired');
         exit('Sesion CSRF invalida. Vuelva a la pagina e intente nuevamente.');
     }
 }
